@@ -58,6 +58,8 @@ To run the project locally:
 2. Open the project folder
 3. Make sure the structure is like this:
 
+
+```text
 assignment-2/
 ├── README.md
 ├── index.html
@@ -68,6 +70,7 @@ assignment-2/
 ├── docs/
 │   ├── ai-usage-report.md
 │   └── technical-documentation.md
+```
 
 4. Open `index.html` in any browser
 

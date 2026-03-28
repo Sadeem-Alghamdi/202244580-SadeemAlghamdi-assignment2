@@ -2,6 +2,10 @@
 
 ## Project Structure
 
+
+## Project Structure
+
+```text
 assignment-2/
 ├── README.md
 ├── index.html
@@ -12,7 +16,7 @@ assignment-2/
 ├── docs/
 │   ├── ai-usage-report.md
 │   └── technical-documentation.md
-
+```
 ---
 
 ## HTML Structure
