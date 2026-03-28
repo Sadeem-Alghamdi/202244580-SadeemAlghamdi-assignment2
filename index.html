@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sadeem Alghamdi | Interactive Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<div class="progress-bar" id="progressBar"></div>
+
+<div class="bg-orb orb-1"></div>
+<div class="bg-orb orb-2"></div>
+<div class="bg-orb orb-3"></div>
+
+<header class="header">
+  <nav class="nav container">
+    <a href="#home" class="logo">SA</a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <div class="nav-menu" id="navMenu">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#contact" class="nav-link">Contact</a>
+
+      <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section id="home" class="hero section">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <span class="greeting-badge" id="greeting">Hello</span>
+        <h1>
+          I’m <span class="gradient-text">Sadeem Alghamdi</span>
+        </h1>
+        <p class="subtitle">
+          Software Engineering student building clean, interactive, and user-focused digital experiences.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">Explore Projects</a>
+          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        </div>
+
+
+      </div>
+
+      <div class="hero-panel glass-card">
+        <h3>Personalize Your Visit</h3>
+        <p class="muted">Save your name for a more personal experience.</p>
+
+        <div class="name-row">
+          <input type="text" id="visitorName" placeholder="Enter your name" />
+          <button type="button" id="saveNameBtn" class="btn btn-primary small-btn">Save</button>
+        </div>
+
+        <p id="personalGreeting" class="personal-greeting"></p>
+
+        <div class="hero-stats">
+          <div class="stat-card">
+            <h4 class="counter" data-target="3">0</h4>
+            <p>Projects</p>
+          </div>
+          <div class="stat-card">
+            <h4 class="counter" data-target="4">0</h4>
+            <p>Core Skills</p>
+          </div>
+          <div class="stat-card">
+            <h4 class="counter" data-target="2">0</h4>
+            <p>Awards / Highlights</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-label">About</span>
+        <p class="section-text">
+          I enjoy turning academic ideas into real, usable systems. My focus is not only on functionality, but also on clarity, user experience, and clean structure.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="glass-card about-card">
+          <h3>Who I Am</h3>
+          <p>
+            I am a Software Engineering student at KFUPM who enjoys problem solving, building structured interfaces, and improving the user experience through thoughtful interaction.
+          </p>
+        </div>
+
+        <div class="glass-card about-card">
+          <h3>What I Focus On</h3>
+          <ul class="feature-list">
+            <li><i class="fa-solid fa-check"></i> Clean and readable code</li>
+            <li><i class="fa-solid fa-check"></i> Modern UI with strong usability</li>
+            <li><i class="fa-solid fa-check"></i> Interactive front-end features</li>
+            <li><i class="fa-solid fa-check"></i> Organized project structure</li>
+          </ul>
+        </div>
+
+        <div class="glass-card about-card">
+          <h3>Quick Info</h3>
+          <div class="quick-info">
+            <p><i class="fa-solid fa-envelope"></i> Sadeem.g@icloud.com</p>
+            <p><i class="fa-solid fa-location-dot"></i> KFUPM, Saudi Arabia</p>
+            <p><i class="fa-solid fa-graduation-cap"></i> Software Engineering</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-label">Projects</span>
+        <h2 class="section-title">Interactive project showcase</h2>
+        <p class="section-text">
+          Search, filter, open details, and save your favorite project.
+        </p>
+      </div>
+
+      <div class="project-controls glass-card">
+        <div class="search-wrap">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+                  type="text"
+                  id="projectSearch"
+                  class="search-input"
+                  placeholder="Search projects by title or keyword"
+          />
+        </div>
+
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="software">Software</button>
+          <button class="filter-btn" data-filter="database">Database</button>
+          <button class="filter-btn" data-filter="design">Design</button>
+        </div>
+
+        <p id="favoriteMessage" class="favorite-message"></p>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+        <article
+                class="project-card glass-card"
+                data-category="database"
+                data-title="Horse Racing Database"
+                data-keywords="sql database relational data design"
+                data-project="Horse Racing Database"
+                data-description="A relational database project designed to manage horses, races, trainers, and results with structured SQL queries and database relationships."
+        >
+          <div class="project-top">
+            <div class="project-icon"><i class="fa-solid fa-database"></i></div>
+            <button class="favorite-btn" type="button" aria-label="Save favorite project">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+          <h3>Horse Racing Database</h3>
+          <p>A structured SQL-based database system for managing racing data and results.</p>
+          <div class="project-tags">
+            <span class="tag">SQL</span>
+            <span class="tag">Database Design</span>
+          </div>
+          <div class="project-actions">
+            <button class="btn btn-primary small-btn open-modal-btn" type="button">View Details</button>
+          </div>
+        </article>
+
+        <article
+                class="project-card glass-card"
+                data-category="software"
+                data-title="KFUPM Map Tool"
+                data-keywords="java campus map tool classes distance software"
+                data-project="KFUPM Map Tool"
+                data-description="A Java-based tool that helps calculate distances between campus locations and supports better class planning and navigation."
+        >
+          <div class="project-top">
+            <div class="project-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+            <button class="favorite-btn" type="button" aria-label="Save favorite project">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+          <h3>KFUPM Map Tool</h3>
+          <p>A Java project that helps estimate movement between classes using campus locations.</p>
+          <div class="project-tags">
+            <span class="tag">Java</span>
+            <span class="tag">Data Structures</span>
+          </div>
+          <div class="project-actions">
+            <button class="btn btn-primary small-btn open-modal-btn" type="button">View Details</button>
+          </div>
+        </article>
+
+        <article
+                class="project-card glass-card"
+                data-category="design"
+                data-title="Course Tutoring App"
+                data-keywords="ux web design tutoring student platform"
+                data-project="Course Tutoring App"
+                data-description="A platform concept focused on helping students find tutoring support through a clear, usable, and student-centered interface."
+        >
+          <div class="project-top">
+            <div class="project-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <button class="favorite-btn" type="button" aria-label="Save favorite project">
+              <i class="fa-regular fa-heart"></i></button>
+          </div>
+          <h3>Course Tutoring App</h3>
+          <p>A student-centered platform concept for organizing tutoring sessions and support.</p>
+          <div class="project-tags">
+            <span class="tag">Web Design</span>
+            <span class="tag">UX</span>
+          </div>
+          <div class="project-actions">
+            <button class="btn btn-primary small-btn open-modal-btn" type="button">View Details</button>
+          </div>
+        </article>
+      </div>
+
+      <p id="emptyMessage" class="empty-message"></p>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-label">Skills</span>
+        <h2 class="section-title">Switch between skill groups</h2>
+        <p class="section-text">
+          This section uses interactive tabs instead of showing everything at once.
+        </p>
+      </div>
+
+      <div class="tabs-wrap glass-card">
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="programming">Programming</button>
+          <button class="tab-btn" data-tab="tools">Tools</button>
+          <button class="tab-btn" data-tab="softskills">Soft Skills</button>
+        </div>
+
+        <div class="tab-content active" id="programming">
+          <div class="skills-pills">
+            <span class="skill-pill">Java</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">SQL</span>
+            <span class="skill-pill">HTML/CSS</span>
+          </div>
+        </div>
+
+        <div class="tab-content" id="tools">
+          <div class="skills-pills">
+            <span class="skill-pill">GitHub</span>
+            <span class="skill-pill">VS Code</span>
+            <span class="skill-pill">WebStorm</span>
+            <span class="skill-pill">Figma</span>
+          </div>
+        </div>
+
+        <div class="tab-content" id="softskills">
+          <div class="skills-pills">
+            <span class="skill-pill">Communication</span>
+            <span class="skill-pill">Teamwork</span>
+            <span class="skill-pill">Problem Solving</span>
+            <span class="skill-pill">Critical Thinking</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="highlight-banner glass-card">
+        <div class="highlight-emoji">🥈</div>
+        <div>
+          <h3>Public Speaking Achievement</h3>
+          <p>2nd Place – Islamic and Arabic Studies Department, KFUPM</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-label">Contact</span>
+        <h2 class="section-title">Let’s connect</h2>
+        <p class="section-text">
+          Fill out the form below. All fields are required.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="glass-card contact-info">
+          <h3>Contact Info</h3>
+          <div class="contact-links">
+            <a href="mailto:Sadeem.g@icloud.com" class="contact-link">
+              <i class="fa-solid fa-envelope"></i>
+              <span>Sadeem.g@icloud.com</span>
+            </a>
+            <a href="#" class="contact-link">
+              <i class="fa-brands fa-linkedin"></i>
+              <span>LinkedIn Profile</span>
+            </a>
+          </div>
+        </div>
+
+        <form class="glass-card contact-form" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p id="formMessage" class="form-message" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>&copy; <span id="year"></span> Sadeem Alghamdi. All rights reserved.</p>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-card">
+    <button class="modal-close" id="modalClose" aria-label="Close modal">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="modal-icon" id="modalIcon"><i class="fa-solid fa-layer-group"></i></div>
+    <h3 id="modalTitle">Project Title</h3>
+    <p id="modalDescription">Project description goes here.</p>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
