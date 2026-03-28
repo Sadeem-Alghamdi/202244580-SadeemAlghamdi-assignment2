@@ -1,6 +1,5 @@
 # Technical Documentation
 
-## Project Structure
 
 
 ## Project Structure
